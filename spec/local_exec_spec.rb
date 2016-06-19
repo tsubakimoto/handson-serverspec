@@ -2,6 +2,12 @@ require 'serverspec'
 
 set :backend, :exec
 
+describe "OS のバージョンは Ubuntu 14.04 であることを確認する" do
+  describe command("lsb_release -a") do
+    its(:stdout) { should match /Ubuntu 14.04/ }
+  end
+end
+
 describe "docker-engine がインストールされていることを確認する" do
   describe package('docker-engine'), :if => os[:family] == 'ubuntu' do
     it { should be_installed }
