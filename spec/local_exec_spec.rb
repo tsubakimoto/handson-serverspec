@@ -14,9 +14,12 @@ describe "docker-engine がインストールされていることを確認す�
   end
 end
 
-describe "docker-engine 起動していることを確認する" do
+describe "docker-engine 起動していること / docker のバージョンを確認する" do
   describe service('docker'), :if => os[:family] == 'ubuntu' do
     it { should be_running }
+  end
+  describe command("docker version") do
+    its(:stdout) { should match /1.11.2/ }
   end
 end
 
