@@ -28,3 +28,23 @@
 
 3 directories, 12 files
 ```
+
+## 使い方
+
+### backends
+
+```
+# Dockerfile を出力します
+bundle exec ruby backends/dockerfile_backend.rb
+
+# Shell Script を出力します
+bundle exec ruby backends/shellscript_backend.rb
+```
+
+### spec
+
+```
+bundle exec rspec spec/local_exec_spec.rb
+bundle exec rspec spec/docker_dockerfile_spec.rb
+bundle exec rspec spec/docker_site_spec.rb
+```
