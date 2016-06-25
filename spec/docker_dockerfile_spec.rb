@@ -16,8 +16,10 @@ describe "Dockerfile Check" do
     its(:stdout) { should match /Ubuntu 14/ }
   end
 
-  describe package("apache2") do
-    it { should be_installed }
+  %w(apache2 php).each do |pkg|
+    describe package(pkg) do
+      it { should be_installed }
+    end
   end
 
   describe process("apache2") do
