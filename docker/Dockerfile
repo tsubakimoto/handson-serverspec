@@ -1,8 +1,8 @@
 FROM ubuntu:14.04
 RUN apt-get update && \
     apt-get install -y apache2 php5 && \
-    [ -f /var/run/apache2 ] && mkdir /var/run/apache2 && \
-    [ -f /var/lock/apache2 ] && mkdir /var/lock/apache2
+    [ -f /var/run/apache2 ] || mkdir /var/run/apache2 && \
+    [ -f /var/lock/apache2 ] || mkdir /var/lock/apache2
 ADD index.html /var/www/html/
 EXPOSE 80
 env APACHE_RUN_USER    www-data
