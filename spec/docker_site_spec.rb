@@ -1,4 +1,5 @@
 require "infrataster/rspec"
+require "docker"
 
 #
 # Infrataster のテストで利用するコンテナを用意する定義

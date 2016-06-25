@@ -47,4 +47,5 @@ bundle exec ruby backends/shellscript_backend.rb
 bundle exec rspec spec/local_exec_spec.rb
 bundle exec rspec spec/docker_dockerfile_spec.rb
 bundle exec rspec spec/docker_site_spec.rb
+bundle exec rspec spec/docker_*_spec.rb
 ```
