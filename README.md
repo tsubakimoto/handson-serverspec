@@ -2,7 +2,7 @@
 
 ## なにこれ
 
-- [DevOps勉強会 #3 Serverspecの巻](http://peatix.com/event/176876/) にて利用予定の資料
+- [DevOps勉強会 #3 Serverspecの巻](http://peatix.com/event/176876/) にて利用予定の資料...
 
 ## ファイル
 
