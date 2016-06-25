@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 RUN apt-get update && \
-    apt-get install -y apache2 && \
+    apt-get install -y apache2 php5 && \
     mkdir /var/run/apache2 && \
     mkdir /var/lock/apache2
 ADD index.html /var/www/html/
