@@ -1,0 +1,8 @@
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - bundle
+    - bundle exec rspec spec/docker_*_spec.rb
