@@ -1,5 +1,6 @@
-require "serverspec"
-require "docker"
+#require "serverspec"
+#require "docker"
+require "spec_helper"
 
 describe "Dockerfile Check" do
   #
