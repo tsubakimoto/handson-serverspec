@@ -4,11 +4,8 @@ machine:
   services:
     - docker
 
-dependencies:
-  override:
-    - docker build -t handson ./docker/
-
 test:
-  override:
+  pre:
     - bundle
+  override:
     - bundle exec rspec spec/docker_*_spec.rb
