@@ -13,7 +13,7 @@ if ENV['CIRCLECI']
       def exec(command, opts = {}, &block)
         command[2] = command[2].inspect # ['/bin/sh', '-c', 'YOUR COMMAND']
         # cmd = %Q{sudo lxc-attach -n #{self.id} -- #{command.join(' ')}}
-        cmd = %Q{sudo lxc-attach -n #{self.id} -- bash -c #{command[2]}}
+        cmd = %Q{sudo lxc-attach -n #{self.id} -- #{command[2]}}
         stdin, stdout, stderr, wait_thread = Open3.popen3 cmd
         # p stdout.read
         # p stderr.read
