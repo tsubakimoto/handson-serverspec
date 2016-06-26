@@ -4,12 +4,11 @@ machine:
   services:
     - docker
 
+dependencies:
+  override:
+    - docker build -t handson ./docker/
+
 test:
   override:
     - bundle
-    - bundle exec rspec spec/docker_*_spec.rb:
-        files:
-          - spec/docker_*_spec.rb
-        environment:
-          DOCKER_CONTAINER: handson
-
+    - bundle exec rspec spec/docker_*_spec.rb
