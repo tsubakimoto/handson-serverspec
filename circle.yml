@@ -5,11 +5,9 @@ machine:
     - docker
 
 test:
-  environment:
-    DOCKER_CONTAINER: handson
-  pre:
-    - docker build -t inokappa/handson ./docker/
-    - docker run --name handson -p 80:80 -d inokappa/handson && sleep 5
+  #pre:
+  #  - docker build -t inokappa/handson ./docker/
+  #  - docker run --name handson -p 80:80 -d inokappa/handson && sleep 5
   override:
     - bundle exec rspec spec/docker_*_spec.rb:
         files:
