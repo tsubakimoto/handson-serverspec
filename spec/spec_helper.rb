@@ -14,9 +14,9 @@ if ENV['CIRCLECI']
         cmd = %Q{sudo lxc-attach -n #{self.id} -- #{command.join(' ')}}
         puts cmd
         stdin, stdout, stderr, wait_thread = Open3.popen3 cmd
-        puts stdout
-        puts stderr
-        puts wait_thread
+        stdout.puts
+        stderr.puts
+        wait_thread.puts
         [stdout.read, [stderr.read], wait_thread.value.exitstatus]
       end
       def remove(options={})
