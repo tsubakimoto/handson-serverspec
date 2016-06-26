@@ -9,7 +9,7 @@ describe "Dockerfile Check" do
   before(:all) do
     image = Docker::Image.build_from_dir("./docker/", { "nocache" => "true"})
     set :os, family: :debian
-    set :backend, :docker       # Serverspec の Docker バックエンドを利用してテスト
+    # set :backend, :docker       # Serverspec の Docker バックエンドを利用してテスト
     set :docker_image, image.id
   end
 
