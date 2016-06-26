@@ -5,6 +5,8 @@ require 'open3'
 # https://circleci.com/docs/docker#docker-exec
 # https://ja.ngs.io/2015/09/26/circleci-docker-serverspec/
 
+set :docker_container, ENV['DOCKER_CONTAINER']
+
 if ENV['CIRCLECI']
   module Docker
     class Container
