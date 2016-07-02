@@ -5,7 +5,7 @@ describe "Dockerfile Check" do
   # 最初に一度だけ実行される
   #
   before(:all) do
-    image = Docker::Image.build_from_dir("./docker/", { "nocache" => "true"})
+    image = Docker::Image.build_from_dir("./docker/")
     set :os, family: :ubuntu
     set :backend, :docker       # Serverspec の Docker バックエンドを利用してテスト
     set :docker_image, image.id
