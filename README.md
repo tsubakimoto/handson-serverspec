@@ -1,4 +1,4 @@
-# Serverspec ハンズオン資料
+# Serverspec ハンズオン資料 (by Yuta)
 
 ## なにこれ
 
